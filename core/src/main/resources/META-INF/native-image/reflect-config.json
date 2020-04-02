@@ -1,0 +1,922 @@
+[
+{
+  "name":"com.google.api.FieldBehavior",
+  "methods":[
+    {"name":"getValueDescriptor","parameterTypes":[] }, 
+    {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] }
+  ]
+},
+{
+  "name":"com.google.api.client.http.GenericUrl",
+  "allDeclaredFields":true
+},
+{
+  "name":"com.google.api.client.http.HttpHeaders",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.google.api.client.json.GenericJson",
+  "allDeclaredFields":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.google.api.client.util.GenericData",
+  "allDeclaredFields":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.google.auth.oauth2.GoogleCredentials"
+},
+{
+  "name":"com.google.auth.oauth2.ServiceAccountCredentials",
+  "methods":[
+    {"name":"getClientEmail","parameterTypes":[] }, 
+    {"name":"getClientId","parameterTypes":[] }, 
+    {"name":"getPrivateKey","parameterTypes":[] }, 
+    {"name":"getPrivateKeyId","parameterTypes":[] }, 
+    {"name":"getScopes","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.auth.oauth2.ServiceAccountJwtAccessCredentials",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.auth.oauth2.ServiceAccountJwtAccessCredentials$Builder",
+  "methods":[
+    {"name":"build","parameterTypes":[] }, 
+    {"name":"setClientEmail","parameterTypes":["java.lang.String"] }, 
+    {"name":"setClientId","parameterTypes":["java.lang.String"] }, 
+    {"name":"setPrivateKey","parameterTypes":["java.security.PrivateKey"] }, 
+    {"name":"setPrivateKeyId","parameterTypes":["java.lang.String"] }
+  ]
+},
+{
+  "name":"com.google.common.util.concurrent.AbstractFuture",
+  "fields":[
+    {"name":"listeners", "allowUnsafeAccess":true}, 
+    {"name":"value", "allowUnsafeAccess":true}, 
+    {"name":"waiters", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.google.common.util.concurrent.AbstractFuture$Waiter",
+  "fields":[
+    {"name":"next", "allowUnsafeAccess":true}, 
+    {"name":"thread", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FieldOptions",
+  "methods":[
+    {"name":"getCtype","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getJstype","parameterTypes":[] }, 
+    {"name":"getLazy","parameterTypes":[] }, 
+    {"name":"getPacked","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"getWeak","parameterTypes":[] }, 
+    {"name":"hasCtype","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasJstype","parameterTypes":[] }, 
+    {"name":"hasLazy","parameterTypes":[] }, 
+    {"name":"hasPacked","parameterTypes":[] }, 
+    {"name":"hasWeak","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FieldOptions$Builder",
+  "methods":[
+    {"name":"addUninterpretedOption","parameterTypes":["com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"clearCtype","parameterTypes":[] }, 
+    {"name":"clearDeprecated","parameterTypes":[] }, 
+    {"name":"clearJstype","parameterTypes":[] }, 
+    {"name":"clearLazy","parameterTypes":[] }, 
+    {"name":"clearPacked","parameterTypes":[] }, 
+    {"name":"clearUninterpretedOption","parameterTypes":[] }, 
+    {"name":"clearWeak","parameterTypes":[] }, 
+    {"name":"getCtype","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getJstype","parameterTypes":[] }, 
+    {"name":"getLazy","parameterTypes":[] }, 
+    {"name":"getPacked","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionBuilder","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"getWeak","parameterTypes":[] }, 
+    {"name":"hasCtype","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasJstype","parameterTypes":[] }, 
+    {"name":"hasLazy","parameterTypes":[] }, 
+    {"name":"hasPacked","parameterTypes":[] }, 
+    {"name":"hasWeak","parameterTypes":[] }, 
+    {"name":"setCtype","parameterTypes":["com.google.protobuf.DescriptorProtos$FieldOptions$CType"] }, 
+    {"name":"setDeprecated","parameterTypes":["boolean"] }, 
+    {"name":"setJstype","parameterTypes":["com.google.protobuf.DescriptorProtos$FieldOptions$JSType"] }, 
+    {"name":"setLazy","parameterTypes":["boolean"] }, 
+    {"name":"setPacked","parameterTypes":["boolean"] }, 
+    {"name":"setUninterpretedOption","parameterTypes":["int","com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"setWeak","parameterTypes":["boolean"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FieldOptions$CType",
+  "methods":[
+    {"name":"getValueDescriptor","parameterTypes":[] }, 
+    {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FieldOptions$JSType",
+  "methods":[
+    {"name":"getValueDescriptor","parameterTypes":[] }, 
+    {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FileOptions",
+  "methods":[
+    {"name":"getCcEnableArenas","parameterTypes":[] }, 
+    {"name":"getCcGenericServices","parameterTypes":[] }, 
+    {"name":"getCsharpNamespace","parameterTypes":[] }, 
+    {"name":"getCsharpNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getGoPackage","parameterTypes":[] }, 
+    {"name":"getGoPackageBytes","parameterTypes":[] }, 
+    {"name":"getJavaGenerateEqualsAndHash","parameterTypes":[] }, 
+    {"name":"getJavaGenericServices","parameterTypes":[] }, 
+    {"name":"getJavaMultipleFiles","parameterTypes":[] }, 
+    {"name":"getJavaOuterClassname","parameterTypes":[] }, 
+    {"name":"getJavaOuterClassnameBytes","parameterTypes":[] }, 
+    {"name":"getJavaPackage","parameterTypes":[] }, 
+    {"name":"getJavaPackageBytes","parameterTypes":[] }, 
+    {"name":"getJavaStringCheckUtf8","parameterTypes":[] }, 
+    {"name":"getObjcClassPrefix","parameterTypes":[] }, 
+    {"name":"getObjcClassPrefixBytes","parameterTypes":[] }, 
+    {"name":"getOptimizeFor","parameterTypes":[] }, 
+    {"name":"getPhpClassPrefix","parameterTypes":[] }, 
+    {"name":"getPhpClassPrefixBytes","parameterTypes":[] }, 
+    {"name":"getPhpGenericServices","parameterTypes":[] }, 
+    {"name":"getPhpMetadataNamespace","parameterTypes":[] }, 
+    {"name":"getPhpMetadataNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getPhpNamespace","parameterTypes":[] }, 
+    {"name":"getPhpNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getPyGenericServices","parameterTypes":[] }, 
+    {"name":"getRubyPackage","parameterTypes":[] }, 
+    {"name":"getRubyPackageBytes","parameterTypes":[] }, 
+    {"name":"getSwiftPrefix","parameterTypes":[] }, 
+    {"name":"getSwiftPrefixBytes","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasCcEnableArenas","parameterTypes":[] }, 
+    {"name":"hasCcGenericServices","parameterTypes":[] }, 
+    {"name":"hasCsharpNamespace","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasGoPackage","parameterTypes":[] }, 
+    {"name":"hasJavaGenerateEqualsAndHash","parameterTypes":[] }, 
+    {"name":"hasJavaGenericServices","parameterTypes":[] }, 
+    {"name":"hasJavaMultipleFiles","parameterTypes":[] }, 
+    {"name":"hasJavaOuterClassname","parameterTypes":[] }, 
+    {"name":"hasJavaPackage","parameterTypes":[] }, 
+    {"name":"hasJavaStringCheckUtf8","parameterTypes":[] }, 
+    {"name":"hasObjcClassPrefix","parameterTypes":[] }, 
+    {"name":"hasOptimizeFor","parameterTypes":[] }, 
+    {"name":"hasPhpClassPrefix","parameterTypes":[] }, 
+    {"name":"hasPhpGenericServices","parameterTypes":[] }, 
+    {"name":"hasPhpMetadataNamespace","parameterTypes":[] }, 
+    {"name":"hasPhpNamespace","parameterTypes":[] }, 
+    {"name":"hasPyGenericServices","parameterTypes":[] }, 
+    {"name":"hasRubyPackage","parameterTypes":[] }, 
+    {"name":"hasSwiftPrefix","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FileOptions$Builder",
+  "methods":[
+    {"name":"addUninterpretedOption","parameterTypes":["com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"clearCcEnableArenas","parameterTypes":[] }, 
+    {"name":"clearCcGenericServices","parameterTypes":[] }, 
+    {"name":"clearCsharpNamespace","parameterTypes":[] }, 
+    {"name":"clearDeprecated","parameterTypes":[] }, 
+    {"name":"clearGoPackage","parameterTypes":[] }, 
+    {"name":"clearJavaGenerateEqualsAndHash","parameterTypes":[] }, 
+    {"name":"clearJavaGenericServices","parameterTypes":[] }, 
+    {"name":"clearJavaMultipleFiles","parameterTypes":[] }, 
+    {"name":"clearJavaOuterClassname","parameterTypes":[] }, 
+    {"name":"clearJavaPackage","parameterTypes":[] }, 
+    {"name":"clearJavaStringCheckUtf8","parameterTypes":[] }, 
+    {"name":"clearObjcClassPrefix","parameterTypes":[] }, 
+    {"name":"clearOptimizeFor","parameterTypes":[] }, 
+    {"name":"clearPhpClassPrefix","parameterTypes":[] }, 
+    {"name":"clearPhpGenericServices","parameterTypes":[] }, 
+    {"name":"clearPhpMetadataNamespace","parameterTypes":[] }, 
+    {"name":"clearPhpNamespace","parameterTypes":[] }, 
+    {"name":"clearPyGenericServices","parameterTypes":[] }, 
+    {"name":"clearRubyPackage","parameterTypes":[] }, 
+    {"name":"clearSwiftPrefix","parameterTypes":[] }, 
+    {"name":"clearUninterpretedOption","parameterTypes":[] }, 
+    {"name":"getCcEnableArenas","parameterTypes":[] }, 
+    {"name":"getCcGenericServices","parameterTypes":[] }, 
+    {"name":"getCsharpNamespace","parameterTypes":[] }, 
+    {"name":"getCsharpNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getGoPackage","parameterTypes":[] }, 
+    {"name":"getGoPackageBytes","parameterTypes":[] }, 
+    {"name":"getJavaGenerateEqualsAndHash","parameterTypes":[] }, 
+    {"name":"getJavaGenericServices","parameterTypes":[] }, 
+    {"name":"getJavaMultipleFiles","parameterTypes":[] }, 
+    {"name":"getJavaOuterClassname","parameterTypes":[] }, 
+    {"name":"getJavaOuterClassnameBytes","parameterTypes":[] }, 
+    {"name":"getJavaPackage","parameterTypes":[] }, 
+    {"name":"getJavaPackageBytes","parameterTypes":[] }, 
+    {"name":"getJavaStringCheckUtf8","parameterTypes":[] }, 
+    {"name":"getObjcClassPrefix","parameterTypes":[] }, 
+    {"name":"getObjcClassPrefixBytes","parameterTypes":[] }, 
+    {"name":"getOptimizeFor","parameterTypes":[] }, 
+    {"name":"getPhpClassPrefix","parameterTypes":[] }, 
+    {"name":"getPhpClassPrefixBytes","parameterTypes":[] }, 
+    {"name":"getPhpGenericServices","parameterTypes":[] }, 
+    {"name":"getPhpMetadataNamespace","parameterTypes":[] }, 
+    {"name":"getPhpMetadataNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getPhpNamespace","parameterTypes":[] }, 
+    {"name":"getPhpNamespaceBytes","parameterTypes":[] }, 
+    {"name":"getPyGenericServices","parameterTypes":[] }, 
+    {"name":"getRubyPackage","parameterTypes":[] }, 
+    {"name":"getRubyPackageBytes","parameterTypes":[] }, 
+    {"name":"getSwiftPrefix","parameterTypes":[] }, 
+    {"name":"getSwiftPrefixBytes","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionBuilder","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasCcEnableArenas","parameterTypes":[] }, 
+    {"name":"hasCcGenericServices","parameterTypes":[] }, 
+    {"name":"hasCsharpNamespace","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasGoPackage","parameterTypes":[] }, 
+    {"name":"hasJavaGenerateEqualsAndHash","parameterTypes":[] }, 
+    {"name":"hasJavaGenericServices","parameterTypes":[] }, 
+    {"name":"hasJavaMultipleFiles","parameterTypes":[] }, 
+    {"name":"hasJavaOuterClassname","parameterTypes":[] }, 
+    {"name":"hasJavaPackage","parameterTypes":[] }, 
+    {"name":"hasJavaStringCheckUtf8","parameterTypes":[] }, 
+    {"name":"hasObjcClassPrefix","parameterTypes":[] }, 
+    {"name":"hasOptimizeFor","parameterTypes":[] }, 
+    {"name":"hasPhpClassPrefix","parameterTypes":[] }, 
+    {"name":"hasPhpGenericServices","parameterTypes":[] }, 
+    {"name":"hasPhpMetadataNamespace","parameterTypes":[] }, 
+    {"name":"hasPhpNamespace","parameterTypes":[] }, 
+    {"name":"hasPyGenericServices","parameterTypes":[] }, 
+    {"name":"hasRubyPackage","parameterTypes":[] }, 
+    {"name":"hasSwiftPrefix","parameterTypes":[] }, 
+    {"name":"setCcEnableArenas","parameterTypes":["boolean"] }, 
+    {"name":"setCcGenericServices","parameterTypes":["boolean"] }, 
+    {"name":"setCsharpNamespace","parameterTypes":["java.lang.String"] }, 
+    {"name":"setCsharpNamespaceBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setDeprecated","parameterTypes":["boolean"] }, 
+    {"name":"setGoPackage","parameterTypes":["java.lang.String"] }, 
+    {"name":"setGoPackageBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setJavaGenerateEqualsAndHash","parameterTypes":["boolean"] }, 
+    {"name":"setJavaGenericServices","parameterTypes":["boolean"] }, 
+    {"name":"setJavaMultipleFiles","parameterTypes":["boolean"] }, 
+    {"name":"setJavaOuterClassname","parameterTypes":["java.lang.String"] }, 
+    {"name":"setJavaOuterClassnameBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setJavaPackage","parameterTypes":["java.lang.String"] }, 
+    {"name":"setJavaPackageBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setJavaStringCheckUtf8","parameterTypes":["boolean"] }, 
+    {"name":"setObjcClassPrefix","parameterTypes":["java.lang.String"] }, 
+    {"name":"setObjcClassPrefixBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setOptimizeFor","parameterTypes":["com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode"] }, 
+    {"name":"setPhpClassPrefix","parameterTypes":["java.lang.String"] }, 
+    {"name":"setPhpClassPrefixBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setPhpGenericServices","parameterTypes":["boolean"] }, 
+    {"name":"setPhpMetadataNamespace","parameterTypes":["java.lang.String"] }, 
+    {"name":"setPhpMetadataNamespaceBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setPhpNamespace","parameterTypes":["java.lang.String"] }, 
+    {"name":"setPhpNamespaceBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setPyGenericServices","parameterTypes":["boolean"] }, 
+    {"name":"setRubyPackage","parameterTypes":["java.lang.String"] }, 
+    {"name":"setRubyPackageBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setSwiftPrefix","parameterTypes":["java.lang.String"] }, 
+    {"name":"setSwiftPrefixBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setUninterpretedOption","parameterTypes":["int","com.google.protobuf.DescriptorProtos$UninterpretedOption"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$FileOptions$OptimizeMode",
+  "methods":[
+    {"name":"getValueDescriptor","parameterTypes":[] }, 
+    {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$MessageOptions",
+  "methods":[
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getMapEntry","parameterTypes":[] }, 
+    {"name":"getMessageSetWireFormat","parameterTypes":[] }, 
+    {"name":"getNoStandardDescriptorAccessor","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasMapEntry","parameterTypes":[] }, 
+    {"name":"hasMessageSetWireFormat","parameterTypes":[] }, 
+    {"name":"hasNoStandardDescriptorAccessor","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$MessageOptions$Builder",
+  "methods":[
+    {"name":"addUninterpretedOption","parameterTypes":["com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"clearDeprecated","parameterTypes":[] }, 
+    {"name":"clearMapEntry","parameterTypes":[] }, 
+    {"name":"clearMessageSetWireFormat","parameterTypes":[] }, 
+    {"name":"clearNoStandardDescriptorAccessor","parameterTypes":[] }, 
+    {"name":"clearUninterpretedOption","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getMapEntry","parameterTypes":[] }, 
+    {"name":"getMessageSetWireFormat","parameterTypes":[] }, 
+    {"name":"getNoStandardDescriptorAccessor","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionBuilder","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasMapEntry","parameterTypes":[] }, 
+    {"name":"hasMessageSetWireFormat","parameterTypes":[] }, 
+    {"name":"hasNoStandardDescriptorAccessor","parameterTypes":[] }, 
+    {"name":"setDeprecated","parameterTypes":["boolean"] }, 
+    {"name":"setMapEntry","parameterTypes":["boolean"] }, 
+    {"name":"setMessageSetWireFormat","parameterTypes":["boolean"] }, 
+    {"name":"setNoStandardDescriptorAccessor","parameterTypes":["boolean"] }, 
+    {"name":"setUninterpretedOption","parameterTypes":["int","com.google.protobuf.DescriptorProtos$UninterpretedOption"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$MethodOptions",
+  "methods":[
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getIdempotencyLevel","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasIdempotencyLevel","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$MethodOptions$Builder",
+  "methods":[
+    {"name":"addUninterpretedOption","parameterTypes":["com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"clearDeprecated","parameterTypes":[] }, 
+    {"name":"clearIdempotencyLevel","parameterTypes":[] }, 
+    {"name":"clearUninterpretedOption","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getIdempotencyLevel","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionBuilder","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"hasIdempotencyLevel","parameterTypes":[] }, 
+    {"name":"setDeprecated","parameterTypes":["boolean"] }, 
+    {"name":"setIdempotencyLevel","parameterTypes":["com.google.protobuf.DescriptorProtos$MethodOptions$IdempotencyLevel"] }, 
+    {"name":"setUninterpretedOption","parameterTypes":["int","com.google.protobuf.DescriptorProtos$UninterpretedOption"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$MethodOptions$IdempotencyLevel",
+  "methods":[
+    {"name":"getValueDescriptor","parameterTypes":[] }, 
+    {"name":"valueOf","parameterTypes":["com.google.protobuf.Descriptors$EnumValueDescriptor"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$ServiceOptions",
+  "methods":[
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$ServiceOptions$Builder",
+  "methods":[
+    {"name":"addUninterpretedOption","parameterTypes":["com.google.protobuf.DescriptorProtos$UninterpretedOption"] }, 
+    {"name":"clearDeprecated","parameterTypes":[] }, 
+    {"name":"clearUninterpretedOption","parameterTypes":[] }, 
+    {"name":"getDeprecated","parameterTypes":[] }, 
+    {"name":"getUninterpretedOption","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionBuilder","parameterTypes":["int"] }, 
+    {"name":"getUninterpretedOptionCount","parameterTypes":[] }, 
+    {"name":"getUninterpretedOptionList","parameterTypes":[] }, 
+    {"name":"hasDeprecated","parameterTypes":[] }, 
+    {"name":"setDeprecated","parameterTypes":["boolean"] }, 
+    {"name":"setUninterpretedOption","parameterTypes":["int","com.google.protobuf.DescriptorProtos$UninterpretedOption"] }
+  ]
+},
+{
+  "name":"com.google.protobuf.DescriptorProtos$UninterpretedOption",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.protobuf.Duration",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.protobuf.ExtensionRegistry",
+  "methods":[{"name":"getEmptyRegistry","parameterTypes":[] }]
+},
+{
+  "name":"com.google.rpc.BadRequest",
+  "methods":[
+    {"name":"getFieldViolations","parameterTypes":["int"] }, 
+    {"name":"getFieldViolationsCount","parameterTypes":[] }, 
+    {"name":"getFieldViolationsList","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.BadRequest$Builder",
+  "methods":[
+    {"name":"addFieldViolations","parameterTypes":["com.google.rpc.BadRequest$FieldViolation"] }, 
+    {"name":"clearFieldViolations","parameterTypes":[] }, 
+    {"name":"getFieldViolations","parameterTypes":["int"] }, 
+    {"name":"getFieldViolationsBuilder","parameterTypes":["int"] }, 
+    {"name":"getFieldViolationsCount","parameterTypes":[] }, 
+    {"name":"getFieldViolationsList","parameterTypes":[] }, 
+    {"name":"setFieldViolations","parameterTypes":["int","com.google.rpc.BadRequest$FieldViolation"] }
+  ]
+},
+{
+  "name":"com.google.rpc.BadRequest$FieldViolation",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.rpc.Help",
+  "methods":[
+    {"name":"getLinks","parameterTypes":["int"] }, 
+    {"name":"getLinksCount","parameterTypes":[] }, 
+    {"name":"getLinksList","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.Help$Builder",
+  "methods":[
+    {"name":"addLinks","parameterTypes":["com.google.rpc.Help$Link"] }, 
+    {"name":"clearLinks","parameterTypes":[] }, 
+    {"name":"getLinks","parameterTypes":["int"] }, 
+    {"name":"getLinksBuilder","parameterTypes":["int"] }, 
+    {"name":"getLinksCount","parameterTypes":[] }, 
+    {"name":"getLinksList","parameterTypes":[] }, 
+    {"name":"setLinks","parameterTypes":["int","com.google.rpc.Help$Link"] }
+  ]
+},
+{
+  "name":"com.google.rpc.Help$Link",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.rpc.LocalizedMessage",
+  "methods":[
+    {"name":"getLocale","parameterTypes":[] }, 
+    {"name":"getLocaleBytes","parameterTypes":[] }, 
+    {"name":"getMessage","parameterTypes":[] }, 
+    {"name":"getMessageBytes","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.LocalizedMessage$Builder",
+  "methods":[
+    {"name":"clearLocale","parameterTypes":[] }, 
+    {"name":"clearMessage","parameterTypes":[] }, 
+    {"name":"getLocale","parameterTypes":[] }, 
+    {"name":"getLocaleBytes","parameterTypes":[] }, 
+    {"name":"getMessage","parameterTypes":[] }, 
+    {"name":"getMessageBytes","parameterTypes":[] }, 
+    {"name":"setLocale","parameterTypes":["java.lang.String"] }, 
+    {"name":"setLocaleBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setMessage","parameterTypes":["java.lang.String"] }, 
+    {"name":"setMessageBytes","parameterTypes":["com.google.protobuf.ByteString"] }
+  ]
+},
+{
+  "name":"com.google.rpc.QuotaFailure",
+  "methods":[
+    {"name":"getViolations","parameterTypes":["int"] }, 
+    {"name":"getViolationsCount","parameterTypes":[] }, 
+    {"name":"getViolationsList","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.QuotaFailure$Builder",
+  "methods":[
+    {"name":"addViolations","parameterTypes":["com.google.rpc.QuotaFailure$Violation"] }, 
+    {"name":"clearViolations","parameterTypes":[] }, 
+    {"name":"getViolations","parameterTypes":["int"] }, 
+    {"name":"getViolationsBuilder","parameterTypes":["int"] }, 
+    {"name":"getViolationsCount","parameterTypes":[] }, 
+    {"name":"getViolationsList","parameterTypes":[] }, 
+    {"name":"setViolations","parameterTypes":["int","com.google.rpc.QuotaFailure$Violation"] }
+  ]
+},
+{
+  "name":"com.google.rpc.QuotaFailure$Violation",
+  "methods":[{"name":"newBuilder","parameterTypes":[] }]
+},
+{
+  "name":"com.google.rpc.RequestInfo",
+  "methods":[
+    {"name":"getRequestId","parameterTypes":[] }, 
+    {"name":"getRequestIdBytes","parameterTypes":[] }, 
+    {"name":"getServingData","parameterTypes":[] }, 
+    {"name":"getServingDataBytes","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.RequestInfo$Builder",
+  "methods":[
+    {"name":"clearRequestId","parameterTypes":[] }, 
+    {"name":"clearServingData","parameterTypes":[] }, 
+    {"name":"getRequestId","parameterTypes":[] }, 
+    {"name":"getRequestIdBytes","parameterTypes":[] }, 
+    {"name":"getServingData","parameterTypes":[] }, 
+    {"name":"getServingDataBytes","parameterTypes":[] }, 
+    {"name":"setRequestId","parameterTypes":["java.lang.String"] }, 
+    {"name":"setRequestIdBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setServingData","parameterTypes":["java.lang.String"] }, 
+    {"name":"setServingDataBytes","parameterTypes":["com.google.protobuf.ByteString"] }
+  ]
+},
+{
+  "name":"com.google.rpc.ResourceInfo",
+  "methods":[
+    {"name":"getDescription","parameterTypes":[] }, 
+    {"name":"getDescriptionBytes","parameterTypes":[] }, 
+    {"name":"getOwner","parameterTypes":[] }, 
+    {"name":"getOwnerBytes","parameterTypes":[] }, 
+    {"name":"getResourceName","parameterTypes":[] }, 
+    {"name":"getResourceNameBytes","parameterTypes":[] }, 
+    {"name":"getResourceType","parameterTypes":[] }, 
+    {"name":"getResourceTypeBytes","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.ResourceInfo$Builder",
+  "methods":[
+    {"name":"clearDescription","parameterTypes":[] }, 
+    {"name":"clearOwner","parameterTypes":[] }, 
+    {"name":"clearResourceName","parameterTypes":[] }, 
+    {"name":"clearResourceType","parameterTypes":[] }, 
+    {"name":"getDescription","parameterTypes":[] }, 
+    {"name":"getDescriptionBytes","parameterTypes":[] }, 
+    {"name":"getOwner","parameterTypes":[] }, 
+    {"name":"getOwnerBytes","parameterTypes":[] }, 
+    {"name":"getResourceName","parameterTypes":[] }, 
+    {"name":"getResourceNameBytes","parameterTypes":[] }, 
+    {"name":"getResourceType","parameterTypes":[] }, 
+    {"name":"getResourceTypeBytes","parameterTypes":[] }, 
+    {"name":"setDescription","parameterTypes":["java.lang.String"] }, 
+    {"name":"setDescriptionBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setOwner","parameterTypes":["java.lang.String"] }, 
+    {"name":"setOwnerBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setResourceName","parameterTypes":["java.lang.String"] }, 
+    {"name":"setResourceNameBytes","parameterTypes":["com.google.protobuf.ByteString"] }, 
+    {"name":"setResourceType","parameterTypes":["java.lang.String"] }, 
+    {"name":"setResourceTypeBytes","parameterTypes":["com.google.protobuf.ByteString"] }
+  ]
+},
+{
+  "name":"com.google.rpc.RetryInfo",
+  "methods":[
+    {"name":"getRetryDelay","parameterTypes":[] }, 
+    {"name":"hasRetryDelay","parameterTypes":[] }
+  ]
+},
+{
+  "name":"com.google.rpc.RetryInfo$Builder",
+  "methods":[
+    {"name":"clearRetryDelay","parameterTypes":[] }, 
+    {"name":"getRetryDelay","parameterTypes":[] }, 
+    {"name":"getRetryDelayBuilder","parameterTypes":[] }, 
+    {"name":"hasRetryDelay","parameterTypes":[] }, 
+    {"name":"setRetryDelay","parameterTypes":["com.google.protobuf.Duration"] }
+  ]
+},
+{
+  "name":"io.grpc.internal.DnsNameResolverProvider"
+},
+{
+  "name":"io.grpc.internal.JndiResourceResolverFactory",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.grpc.internal.PickFirstLoadBalancerProvider"
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.AbstractNettyHandler",
+  "methods":[
+    {"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler",
+  "methods":[
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"close","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"write","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.ProtocolNegotiators$GrpcNegotiationHandler",
+  "methods":[{"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.ProtocolNegotiators$ProtocolNegotiationHandler",
+  "methods":[{"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.ProtocolNegotiators$WaitUntilActiveHandler",
+  "methods":[{"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.grpc.netty.WriteBufferingAndExceptionHandler",
+  "methods":[
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"close","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"flush","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"write","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.buffer.AbstractByteBufAllocator",
+  "allDeclaredMethods":true
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.buffer.AbstractReferenceCountedByteBuf",
+  "fields":[{"name":"refCnt", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.ChannelDuplexHandler",
+  "methods":[
+    {"name":"bind","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"close","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"flush","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"write","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.ChannelInboundHandlerAdapter",
+  "methods":[
+    {"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext",
+  "methods":[
+    {"name":"bind","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"close","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"flush","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"write","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$TailContext",
+  "methods":[
+    {"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRead","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelRegistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelUnregistered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.epoll.Epoll",
+  "methods":[
+    {"name":"isAvailable","parameterTypes":[] }, 
+    {"name":"unavailabilityCause","parameterTypes":[] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.handler.codec.ByteToMessageDecoder",
+  "methods":[
+    {"name":"channelRead","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }, 
+    {"name":"userEventTriggered","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler",
+  "methods":[
+    {"name":"bind","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelWritabilityChanged","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"connect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"flush","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.handler.ssl.SslHandler",
+  "methods":[
+    {"name":"bind","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"channelActive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelInactive","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"channelReadComplete","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"close","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"connect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.net.SocketAddress","java.net.SocketAddress","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"deregister","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"disconnect","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }, 
+    {"name":"exceptionCaught","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Throwable"] }, 
+    {"name":"flush","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"read","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext"] }, 
+    {"name":"write","parameterTypes":["io.grpc.netty.shaded.io.netty.channel.ChannelHandlerContext","java.lang.Object","io.grpc.netty.shaded.io.netty.channel.ChannelPromise"] }
+  ]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.internal.tcnative.SSL"
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.AbstractReferenceCounted",
+  "fields":[{"name":"refCnt", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.ReferenceCountUtil",
+  "allDeclaredMethods":true
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.NativeLibraryUtil",
+  "methods":[{"name":"loadLibrary","parameterTypes":["java.lang.String","boolean"] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueColdProducerFields",
+  "fields":[{"name":"producerLimit", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueConsumerFields",
+  "fields":[{"name":"consumerIndex", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.BaseMpscLinkedArrayQueueProducerFields",
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueConsumerIndexField",
+  "fields":[{"name":"consumerIndex", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerIndexField",
+  "fields":[{"name":"producerIndex", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueueProducerLimitField",
+  "fields":[{"name":"producerLimit", "allowUnsafeAccess":true}]
+},
+{
+  "name":"io.grpc.util.SecretRoundRobinLoadBalancerProvider$Provider"
+},
+{
+  "name":"java.lang.Object",
+  "allDeclaredFields":true
+},
+{
+  "name":"java.lang.management.ManagementFactory",
+  "methods":[{"name":"getRuntimeMXBean","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.management.RuntimeMXBean",
+  "methods":[
+    {"name":"getInputArguments","parameterTypes":[] }, 
+    {"name":"getName","parameterTypes":[] }
+  ]
+},
+{
+  "name":"java.net.InetSocketAddress",
+  "methods":[{"name":"getHostString","parameterTypes":[] }]
+},
+{
+  "name":"java.nio.Bits",
+  "fields":[{"name":"UNALIGNED"}]
+},
+{
+  "name":"java.nio.Buffer",
+  "fields":[{"name":"address", "allowUnsafeAccess":true}]
+},
+{
+  "name":"java.nio.DirectByteBuffer",
+  "methods":[{"name":"<init>","parameterTypes":["long","int"] }]
+},
+{
+  "name":"java.util.AbstractMap",
+  "allDeclaredFields":true
+},
+{
+  "name":"java.util.Locale",
+  "methods":[{"name":"getUnicodeLocaleType","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.util.concurrent.atomic.LongAdder",
+  "allPublicConstructors":true,
+  "methods":[
+    {"name":"add","parameterTypes":["long"] }, 
+    {"name":"sum","parameterTypes":[] }
+  ]
+},
+{
+  "name":"javax.net.ssl.SSLContext",
+  "fields":[{"name":"contextSpi", "allowUnsafeAccess":true}]
+},
+{
+  "name":"jdk.internal.misc.Unsafe",
+  "methods":[{"name":"getUnsafe","parameterTypes":[] }]
+},
+{
+  "name":"sun.misc.Unsafe",
+  "allDeclaredFields":true,
+  "methods":[
+    {"name":"arrayBaseOffset","parameterTypes":["java.lang.Class"] }, 
+    {"name":"arrayIndexScale","parameterTypes":["java.lang.Class"] }, 
+    {"name":"copyMemory","parameterTypes":["long","long","long"] }, 
+    {"name":"copyMemory","parameterTypes":["java.lang.Object","long","java.lang.Object","long","long"] }, 
+    {"name":"getAndSetObject","parameterTypes":["java.lang.Object","long","java.lang.Object"] }, 
+    {"name":"getBoolean","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getByte","parameterTypes":["long"] }, 
+    {"name":"getByte","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getDouble","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getFloat","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getInt","parameterTypes":["long"] }, 
+    {"name":"getInt","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getLong","parameterTypes":["long"] }, 
+    {"name":"getLong","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"getObject","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"invokeCleaner","parameterTypes":["java.nio.ByteBuffer"] }, 
+    {"name":"objectFieldOffset","parameterTypes":["java.lang.reflect.Field"] }, 
+    {"name":"putBoolean","parameterTypes":["java.lang.Object","long","boolean"] }, 
+    {"name":"putByte","parameterTypes":["long","byte"] }, 
+    {"name":"putByte","parameterTypes":["java.lang.Object","long","byte"] }, 
+    {"name":"putDouble","parameterTypes":["java.lang.Object","long","double"] }, 
+    {"name":"putFloat","parameterTypes":["java.lang.Object","long","float"] }, 
+    {"name":"putInt","parameterTypes":["long","int"] }, 
+    {"name":"putInt","parameterTypes":["java.lang.Object","long","int"] }, 
+    {"name":"putLong","parameterTypes":["long","long"] }, 
+    {"name":"putLong","parameterTypes":["java.lang.Object","long","long"] }, 
+    {"name":"putObject","parameterTypes":["java.lang.Object","long","java.lang.Object"] }
+  ]
+},
+{
+  "name":"sun.nio.ch.SelectorImpl",
+  "fields":[
+    {"name":"publicSelectedKeys", "allowUnsafeAccess":true}, 
+    {"name":"selectedKeys", "allowUnsafeAccess":true}
+  ]
+},
+{
+  "name":"sun.security.ssl.SSLContextImpl",
+  "fields":[{"name":"trustManager", "allowUnsafeAccess":true}]
+}
+]
