@@ -9,8 +9,10 @@ ThisBuild / resolvers += Resolver.bintrayRepo("akka", "maven")
 
 val AkkaVersion = "2.6.4"
 val SpannerVersion = "1.52.0"
-val GrpcVersion = "1.28.0"
-val GraalVersion = "20.0.0"
+//val GrpcVersion = "1.28.0"
+val GrpcJavaVersion = "1.22.1"
+val GraalVersion = "19.3.0"
+
 val svmGroupId = if (GraalVersion startsWith "19.2") "com.oracle.substratevm" else "org.graalvm.nativeimage"
 
 lazy val rootProject = (project in file("."))
@@ -30,7 +32,14 @@ lazy val directGrpc = (project in file("direct-grpc"))
     dockerEnvVars += "GOOGLE_APPLICATION_CREDENTIALS" -> "/opt/docker/akka.json",
     Universal / javaOptions += "-J-agentlib:native-image-agent=config-output-dir=/data/",
     Universal / javaOptions += "-J-Dorg.slf4j.simpleLogger.defaultLogLevel=debug",
-    Universal / mappings  += file("akka.json") -> "akka.json"
+    Universal / mappings  += file("akka.json") -> "akka.json",
+    (PB.targets in Compile) := {
+      val old = (PB.targets in Compile).value
+      val ct = crossTarget.value
+      old.map(_.copy(outputPath = ct / "akka-grpc" / "main"))
+    },
+    // For Google Cloud Spanner API
+    PB.protoSources in Compile += target.value / "protobuf_external" / "google" / "spanner" / "v1",
   )
   .settings(
     name := "direct-grpc",
@@ -106,9 +115,9 @@ lazy val directGrpc = (project in file("direct-grpc"))
       log.info(s"Build image ${dockerGraalvmNativeImageName.value}")
     },
     libraryDependencies ++= Seq(
-      "com.google.api.grpc" % "proto-google-cloud-spanner-v1" % SpannerVersion % "protobuf-src",
-      "com.google.api.grpc" % "grpc-google-cloud-spanner-admin-database-v1" % SpannerVersion % "protobuf-src",
-      "io.grpc" % "grpc-auth" % GrpcVersion,
+      "com.google.api.grpc" % "proto-google-cloud-spanner-v1" % SpannerVersion % "protobuf",
+      "com.google.api.grpc" % "grpc-google-cloud-spanner-admin-database-v1" % SpannerVersion % "protobuf",
+      "io.grpc" % "grpc-auth" % GrpcJavaVersion,
       "com.google.auth" % "google-auth-library-oauth2-http" % "0.20.0",
       "org.slf4j" % "slf4j-simple" % "1.7.26",
       //"ch.qos.logback" % "logback-classic" % "1.2.3", // doesn't work with graal
@@ -165,7 +174,7 @@ val sharedNativeImageSettings: Seq[String] = Seq(
       "io.grpc.netty.shaded.io.netty.util.internal.NativeLibraryLoader",
       "io.grpc.netty.shaded.io.netty.handler.ssl.OpenSsl",
       "io.grpc.netty.shaded.io.netty.internal.tcnative.SSL",
-      "io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent"
+      //"io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent"
 
     ).mkString(",")
 )

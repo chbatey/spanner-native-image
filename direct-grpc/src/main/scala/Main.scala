@@ -4,7 +4,6 @@ import akka.stream.{ActorMaterializer, Materializer}
 import com.google.auth.oauth2.GoogleCredentials
 import io.grpc.auth.MoreCallCredentials
 import com.google.spanner.v1.{CreateSessionRequest, DeleteSessionRequest, ExecuteSqlRequest, Session, SpannerClient}
-import io.grpc.netty.shaded.io.netty.handler.ssl.OpenSsl
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -16,12 +15,6 @@ object Main {
     System.getProperties.forEach((key, value) => println(s"$key=$value"))
     System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "trace")
 
-//    System.loadLibrary("libio_grpc_netty_shaded_netty_tcnative_linux_x86_64")
-
-
-
-
-    /*
     implicit val system = ActorSystem("name")
     implicit val mat: Materializer = ActorMaterializer()
     implicit val ec = system.dispatcher
@@ -56,7 +49,5 @@ object Main {
     } finally {
       system.terminate()
     }
-
-     */
   }
 }

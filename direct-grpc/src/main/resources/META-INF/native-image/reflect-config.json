@@ -4,6 +4,7 @@
 },
 {
   "name":"akka.actor.ActorCell",
+  "allDeclaredFields":true,
   "fields":[
     {"name":"akka$actor$dungeon$Children$$_childrenRefsDoNotCallMeDirectly", "allowUnsafeAccess":true}, 
     {"name":"akka$actor$dungeon$Children$$_functionRefsDoNotCallMeDirectly", "allowUnsafeAccess":true}, 
@@ -32,10 +33,12 @@
 },
 {
   "name":"akka.actor.LocalActorRefProvider$Guardian",
+  "allDeclaredFields":true,
   "allDeclaredConstructors":true
 },
 {
   "name":"akka.actor.LocalActorRefProvider$SystemGuardian",
+  "allDeclaredFields":true,
   "allDeclaredConstructors":true
 },
 {
@@ -121,6 +124,7 @@
 },
 {
   "name":"akka.event.DeadLetterListener",
+  "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -129,6 +133,7 @@
 },
 {
   "name":"akka.event.EventStreamUnsubscriber",
+  "allDeclaredFields":true,
   "allDeclaredConstructors":true
 },
 {
@@ -140,6 +145,7 @@
 },
 {
   "name":"akka.event.Logging$DefaultLogger",
+  "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -180,45 +186,15 @@
   "name":"akka.stream.SourceRef"
 },
 {
+  "name":"akka.stream.impl.StreamSupervisor",
+  "allDeclaredFields":true
+},
+{
   "name":"akka.stream.impl.streamref.StreamRefsProtocol"
 },
 {
   "name":"akka.stream.serialization.StreamRefSerializer",
   "methods":[{"name":"<init>","parameterTypes":["akka.actor.ExtendedActorSystem"] }]
-},
-{
-  "name":"ch.qos.logback.classic.PatternLayout",
-  "allPublicMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.DateConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.LevelConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.LineSeparatorConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.LoggerConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.MessageConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.classic.pattern.ThreadConverter",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
-  "name":"ch.qos.logback.core.ConsoleAppender",
-  "allPublicMethods":true,
-  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"com.google.api.client.http.GenericUrl",
@@ -397,10 +373,6 @@
   ]
 },
 {
-  "name":"io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel",
-  "methods":[{"name":"<init>","parameterTypes":[] }]
-},
-{
   "name":"io.grpc.netty.shaded.io.netty.channel.epoll.Epoll",
   "methods":[{"name":"isAvailable","parameterTypes":[] }]
 },
@@ -553,9 +525,6 @@
     {"name":"add","parameterTypes":["long"] }, 
     {"name":"sum","parameterTypes":[] }
   ]
-},
-{
-  "name":"javax.management.ObjectName"
 },
 {
   "name":"javax.net.ssl.KeyManager[]"
