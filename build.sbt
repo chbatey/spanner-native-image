@@ -144,7 +144,7 @@ val sharedNativeImageSettings: Seq[String] = Seq(
   "--no-fallback",
   "--initialize-at-build-time"
     + Seq(
-//    "org.slf4j",
+    "org.slf4j",
     "scala",
     "akka.dispatch.affinity",
     "akka.util",
