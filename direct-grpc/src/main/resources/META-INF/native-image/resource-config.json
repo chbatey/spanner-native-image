@@ -1,0 +1,18 @@
+{
+  "resources":[
+    {"pattern":"\\QGoogleInternetAuthorityG3.crt\\E"}, 
+    {"pattern":"\\QMETA-INF/MANIFEST.MF\\E"}, 
+    {"pattern":"\\QMETA-INF/native/libio_grpc_netty_shaded_netty_tcnative_linux_x86_64.so\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.grpc.LoadBalancerProvider\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.grpc.NameResolverProvider\\E"}, 
+    {"pattern":"\\Qakka-http-version.conf\\E"}, 
+    {"pattern":"\\Qapplication.conf\\E"}, 
+    {"pattern":"\\Qgoogle-http-client.properties\\E"}, 
+    {"pattern":"\\Qlibrary.properties\\E"}, 
+    {"pattern":"\\Qlogback.xml\\E"}, 
+    {"pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"}, 
+    {"pattern":"\\Qreference.conf\\E"}, 
+    {"pattern":"\\Qversion.conf\\E"}
+  ],
+  "bundles":[]
+}

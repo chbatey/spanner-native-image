@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:20.0.0
+FROM oracle/graalvm-ce:20.0.0-java11
 WORKDIR /opt/graalvm
 RUN gu install native-image
 ENTRYPOINT ["native-image"]
