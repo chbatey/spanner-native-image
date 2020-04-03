@@ -8,6 +8,7 @@ ThisBuild /  scalaVersion := "2.12.9"
 ThisBuild / resolvers += Resolver.bintrayRepo("akka", "maven")
 
 val AkkaVersion = "2.6.4"
+val GraalAkkaVersion = "0.4.1"
 val SpannerVersion = "1.52.0"
 //val GrpcVersion = "1.28.0"
 val GrpcJavaVersion = "1.22.1"
@@ -124,7 +125,13 @@ lazy val directGrpc = (project in file("direct-grpc"))
       "org.graalvm.sdk" % "graal-sdk" % GraalVersion % "provided", // Only needed for compilation
       svmGroupId % "svm" % GraalVersion % "provided", // Only needed for compilation
 
+      "com.github.vmencik" %% "graal-akka-actor" % GraalAkkaVersion % "provided", // Only needed for compilation
+      "com.github.vmencik" %% "graal-akka-stream" % GraalAkkaVersion % "provided", // Only needed for compilation
+      "com.github.vmencik" %% "graal-akka-http" % GraalAkkaVersion % "provided", // Only needed for compilation
+
     )
+
+
   )
 
 val sharedNativeImageSettings: Seq[String] = Seq(

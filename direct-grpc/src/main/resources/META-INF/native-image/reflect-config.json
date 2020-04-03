@@ -1283,5 +1283,10 @@
 {
   "name":"io.cloudstate.proxy.autoscaler.ScalingDown",
   "allPublicMethods": true
+},
+{
+  "name":"com.google.api.client.json.GenericJson",
+  "allDeclaredFields":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 }
 ]
