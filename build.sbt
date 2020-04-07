@@ -14,9 +14,7 @@ val GraalAkkaVersion = "0.4.1"
 val SpannerVersion = "1.52.0"
 val GrpcJavaVersion = "1.28.0"
 //val GrpcJavaVersion = "1.22.1"
-val GraalVersion = "20.0.0"
-
-val svmGroupId = if (GraalVersion startsWith "19.2") "com.oracle.substratevm" else "org.graalvm.nativeimage"
+val GraalVersion = "19.3.0"
 
 lazy val rootProject = (project in file("."))
   .settings(publishArtifact := false, name := "graalvm-tests")
@@ -27,7 +25,7 @@ lazy val directGrpc = (project in file("direct-grpc"))
   .enablePlugins(JavaServerAppPackaging)
   .enablePlugins(AkkaGrpcPlugin)
   .settings(
-    dockerBaseImage := "oracle/graalvm-ce:20.0.0-java11",
+    dockerBaseImage := s"oracle/graalvm-ce:$GraalVersion",
     dockerCommands ++= Seq(
       Cmd("USER", "root"),
       ExecCmd("RUN", "gu", "install", "native-image")
@@ -124,12 +122,11 @@ lazy val directGrpc = (project in file("direct-grpc"))
       "com.google.auth" % "google-auth-library-oauth2-http" % "0.20.0",
       "org.slf4j" % "slf4j-simple" % "1.7.26",
       //"ch.qos.logback" % "logback-classic" % "1.2.3", // doesn't work with graal
-      "org.graalvm.sdk" % "graal-sdk" % GraalVersion % "provided", // Only needed for compilation
-      svmGroupId % "svm" % GraalVersion % "provided", // Only needed for compilation
-
-      "com.github.vmencik" %% "graal-akka-actor" % GraalAkkaVersion % "provided", // Only needed for compilation
-      "com.github.vmencik" %% "graal-akka-stream" % GraalAkkaVersion % "provided", // Only needed for compilation
-      "com.github.vmencik" %% "graal-akka-http" % GraalAkkaVersion % "provided", // Only needed for compilation
+//      "org.graalvm.sdk" % "graal-sdk" % GraalVersion % "provided", // Only needed for compilation
+      "org.graalvm.nativeimage" % "svm" % GraalVersion % "provided", // Only needed for compilation
+//      "com.github.vmencik" %% "graal-akka-actor" % GraalAkkaVersion % "provided", // Only needed for compilation
+//      "com.github.vmencik" %% "graal-akka-stream" % GraalAkkaVersion % "provided", // Only needed for compilation
+//      "com.github.vmencik" %% "graal-akka-http" % GraalAkkaVersion % "provided", // Only needed for compilation
 
     )
 
@@ -149,7 +146,7 @@ val sharedNativeImageSettings = Seq(
   "-H:-NativeArchitecture", // if "+" Compiles the native image to customize to the local CPU arch
   "--verbose",
   //"--no-server", // Uncomment to not use the native-image build server, to avoid potential cache problems with builds
-  //"--report-unsupported-elements-at-runtime", // Hopefully a self-explanatory flag
+//  "--report-unsupported-elements-at-runtime",
   "--enable-url-protocols=http,https",
   "--allow-incomplete-classpath",
   "--no-fallback",

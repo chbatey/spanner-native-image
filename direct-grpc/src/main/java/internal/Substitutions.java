@@ -4,6 +4,19 @@ package internal;// FIXME THIS FILE IS FOR PROOF-OF-CONCEPT ONLY
 
 import com.oracle.svm.core.annotate.*;
 
+// From adriaan
+// TODO: proper replacement for accessing the UNALIGNED field in java.nio.Bits https://github.com/netty/netty/blob/netty-4.1.42.Final/common/src/main/java/io/netty/util/internal/PlatformDependent0.java#L266
+@TargetClass(className = "io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$5")
+final class Target_io_netty_util_internal_PlatformDependent0 {
+    // @Inject @RecomputeFieldValue(kind = Kind.FieldOffset, declClassName = "java.nio.Bits", name = "UNALIGNED")
+    // private long UNALIGNED_FIELD_OFFSET;
+
+    @Substitute
+    public Object run() {
+        return new RuntimeException();
+    }
+}
+
 /*
 @TargetClass(
         className =
@@ -37,9 +50,6 @@ final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent
     private static long BYTE_ARRAY_BASE_OFFSET;
 }
 
- */
-
-/*
 @TargetClass(className = "io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0")
 final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent0 {
     @Alias
@@ -49,6 +59,7 @@ final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent
             name = "address")
     private static long ADDRESS_FIELD_OFFSET;
 }
+
  */
 
 /*
@@ -60,7 +71,7 @@ final class Target_org_agrona_concurrent_AbstractConcurrentArrayQueue {
     public static int SHIFT_FOR_SCALE;
 }
  */
-
+/*
 @TargetClass(className = "com.google.protobuf.UnsafeUtil")
 final class Target_com_google_protobuf_UnsafeUtil {
     @Alias
@@ -111,4 +122,6 @@ final class Target_com_google_protobuf_UnsafeUtil {
     @RecomputeFieldValue(kind = RecomputeFieldValue.Kind.ArrayIndexScale, declClass = Object[].class)
     public static long OBJECT_ARRAY_INDEX_SCALE;
 }
+
+ */
 
