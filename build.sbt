@@ -1,4 +1,6 @@
+import java.io.File
 import java.nio.file.{Files, StandardCopyOption}
+
 import com.typesafe.sbt.packager.docker._
 
 val dockerGraalvmNative = taskKey[Unit]("Create a docker image containing a binary build with GraalVM's native-image.")
@@ -10,9 +12,9 @@ ThisBuild / resolvers += Resolver.bintrayRepo("akka", "maven")
 val AkkaVersion = "2.6.4"
 val GraalAkkaVersion = "0.4.1"
 val SpannerVersion = "1.52.0"
-//val GrpcVersion = "1.28.0"
-val GrpcJavaVersion = "1.22.1"
-val GraalVersion = "19.3.0"
+val GrpcJavaVersion = "1.28.0"
+//val GrpcJavaVersion = "1.22.1"
+val GraalVersion = "20.0.0"
 
 val svmGroupId = if (GraalVersion startsWith "19.2") "com.oracle.substratevm" else "org.graalvm.nativeimage"
 
@@ -34,13 +36,13 @@ lazy val directGrpc = (project in file("direct-grpc"))
     Universal / javaOptions += "-J-agentlib:native-image-agent=config-output-dir=/data/",
     Universal / javaOptions += "-J-Dorg.slf4j.simpleLogger.defaultLogLevel=debug",
     Universal / mappings  += file("akka.json") -> "akka.json",
-    (PB.targets in Compile) := {
-      val old = (PB.targets in Compile).value
-      val ct = crossTarget.value
-      old.map(_.copy(outputPath = ct / "akka-grpc" / "main"))
-    },
+//    (PB.targets in Compile) := {
+//      val old = (PB.targets in Compile).value
+//      val ct = crossTarget.value
+//      old.map(_.copy(outputPath = ct / "akka-grpc" / "main"))
+//    },
     // For Google Cloud Spanner API
-    PB.protoSources in Compile += target.value / "protobuf_external" / "google" / "spanner" / "v1",
+//    PB.protoSources in Compile += target.value / "protobuf_external" / "google" / "spanner" / "v1",
   )
   .settings(
     name := "direct-grpc",
@@ -116,8 +118,8 @@ lazy val directGrpc = (project in file("direct-grpc"))
       log.info(s"Build image ${dockerGraalvmNativeImageName.value}")
     },
     libraryDependencies ++= Seq(
-      "com.google.api.grpc" % "proto-google-cloud-spanner-v1" % SpannerVersion % "protobuf",
-      "com.google.api.grpc" % "grpc-google-cloud-spanner-admin-database-v1" % SpannerVersion % "protobuf",
+      "com.google.api.grpc" % "proto-google-cloud-spanner-v1" % SpannerVersion % "protobuf-src",
+      "com.google.api.grpc" % "grpc-google-cloud-spanner-admin-database-v1" % SpannerVersion % "protobuf-src",
       "io.grpc" % "grpc-auth" % GrpcJavaVersion,
       "com.google.auth" % "google-auth-library-oauth2-http" % "0.20.0",
       "org.slf4j" % "slf4j-simple" % "1.7.26",
@@ -133,7 +135,59 @@ lazy val directGrpc = (project in file("direct-grpc"))
 
 
   )
+val sharedNativeImageSettings = Seq(
+  //"-O1", // Optimization level
+//  "-H:ResourceConfigurationFiles=" + targetDir / "resource-config.json",
+//  "-H:ReflectionConfigurationFiles=" + targetDir / "reflect-config.json",
+//  "-H:DynamicProxyConfigurationFiles=" + targetDir / "proxy-config.json",
+  "-H:IncludeResources=.+\\.conf",
+  "-H:IncludeResources=.+\\.properties",
+  "-H:+AllowVMInspection",
+  "-H:-RuntimeAssertions",
+  "-H:+ReportExceptionStackTraces",
+  "-H:-PrintUniverse", // if "+" prints out all classes which are included
+  "-H:-NativeArchitecture", // if "+" Compiles the native image to customize to the local CPU arch
+  "--verbose",
+  //"--no-server", // Uncomment to not use the native-image build server, to avoid potential cache problems with builds
+  //"--report-unsupported-elements-at-runtime", // Hopefully a self-explanatory flag
+  "--enable-url-protocols=http,https",
+  "--allow-incomplete-classpath",
+  "--no-fallback",
+  "--initialize-at-build-time"
+    + Seq(
+    "org.slf4j",
+    "scala",
+    "akka.dispatch.affinity",
+    "akka.util",
+    "com.google.Protobuf"
+  ).mkString("=", ",", ""),
+  "--initialize-at-run-time=" +
+    Seq(
+      "akka.protobuf.DescriptorProtos",
+      // We want to delay initialization of these to load the config at runtime
+      "com.typesafe.config.impl.ConfigImpl$EnvVariablesHolder",
+      "com.typesafe.config.impl.ConfigImpl$SystemPropertiesHolder",
+      // These are to make up for the lack of shaded configuration for svm/native-image in grpc-netty-shaded
+      "com.sun.jndi.dns.DnsClient",
+      "io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2CodecUtil",
+      "io.grpc.netty.shaded.io.netty.handler.codec.http2.DefaultHttp2FrameWriter",
+      "io.grpc.netty.shaded.io.netty.handler.codec.http.HttpObjectEncoder",
+      "io.grpc.netty.shaded.io.netty.handler.codec.http.websocketx.WebSocket00FrameEncoder",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.util.ThreadLocalInsecureRandom",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.ConscryptAlpnSslEngine",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.JettyNpnSslEngine",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslEngine",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.JdkNpnApplicationProtocolNegotiator",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslServerContext",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslClientContext",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.util.BouncyCastleSelfSignedCertGenerator",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslContext",
+      "io.grpc.netty.shaded.io.netty.handler.ssl.util.ThreadLocalInsecureRandom",
+      "io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel"
+    ).mkString(",")
+)
 
+/*
 val sharedNativeImageSettings: Seq[String] = Seq(
   //"-O1", // Optimization level
   "-H:IncludeResources=.+\\.conf",
@@ -185,6 +239,8 @@ val sharedNativeImageSettings: Seq[String] = Seq(
 
     ).mkString(",")
 )
+
+ */
 
 lazy val core: Project = (project in file("core"))
   .enablePlugins(DockerPlugin)

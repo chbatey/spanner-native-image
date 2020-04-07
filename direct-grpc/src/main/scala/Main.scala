@@ -25,12 +25,13 @@ object Main {
 
     try {
       val credentials = GoogleCredentials.getApplicationDefault
-        .createScoped("https://www.googleapis.com/auth/spanner")
+//        .createScoped("https://www.googleapis.com/auth/spanner")
 
       val callCredentials = MoreCallCredentials.from(credentials)
 
       val settings = GrpcClientSettings.fromConfig("spanner-client")
         .withCallCredentials(callCredentials)
+
       val fullyQualifiedDbName: String = s"projects/$project/instances/$instance/databases/$database"
 
       val spanner = SpannerClient(settings)

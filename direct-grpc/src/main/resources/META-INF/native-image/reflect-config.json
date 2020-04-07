@@ -1136,11 +1136,12 @@
   "name":"java.nio.Buffer",
   "fields":[{"name":"address"}]
 },
-{
-  "name":"java.nio.DirectByteBuffer",
-  "fields":[{"name":"cleaner"}],
-  "methods":[{"name":"<init>","parameterTypes":["long","int"] }]
-},
+  // not needed for graal 20
+//{
+//  "name":"java.nio.DirectByteBuffer",
+//  "fields":[{"name":"cleaner"}],
+//  "methods":[{"name":"<init>","parameterTypes":["long","int"] }]
+//},
 {
   "name":"java.util.Optional"
 },
@@ -1288,5 +1289,44 @@
   "name":"com.google.api.client.json.GenericJson",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
-}
+},
+{
+
+  "name": "io.grpc.netty.shaded.io.netty.handler.ssl.JdkSslContext",
+  "fields" : [
+    { "name" : "sslContext", "allowWrite" : true }
+  ]
+
+},
+  {
+    "name":"com.google.api.client.util.GenericData",
+    "allDeclaredFields":true
+  },
+  {
+    "name":"com.google.auth.oauth2.GoogleCredentials"
+  },
+  {
+    "name":"com.google.auth.oauth2.ServiceAccountCredentials",
+    "methods":[
+      {"name":"getClientEmail","parameterTypes":[] },
+      {"name":"getClientId","parameterTypes":[] },
+      {"name":"getPrivateKey","parameterTypes":[] },
+      {"name":"getPrivateKeyId","parameterTypes":[] },
+      {"name":"getScopes","parameterTypes":[] }
+    ]
+  },
+  {
+    "name":"com.google.auth.oauth2.ServiceAccountJwtAccessCredentials",
+    "methods":[{"name":"newBuilder","parameterTypes":[] }]
+  },
+  {
+    "name":"com.google.auth.oauth2.ServiceAccountJwtAccessCredentials$Builder",
+    "methods":[
+      {"name":"build","parameterTypes":[] },
+      {"name":"setClientEmail","parameterTypes":["java.lang.String"] },
+      {"name":"setClientId","parameterTypes":["java.lang.String"] },
+      {"name":"setPrivateKey","parameterTypes":["java.security.PrivateKey"] },
+      {"name":"setPrivateKeyId","parameterTypes":["java.lang.String"] }
+    ]
+  }
 ]

@@ -1,9 +1,10 @@
-// FIXME THIS FILE IS FOR PROOF-OF-CONCEPT ONLY
+package internal;// FIXME THIS FILE IS FOR PROOF-OF-CONCEPT ONLY
 // THESE SUBSTITUTIONS SHOULD BE PRESENT IN THE SHADED VERSION OF NETTY IN GRPC-NETTY-SHADED,
 // AGRONA, AND IN PROTOBUF_JAVA. NOT HERE!
 
 import com.oracle.svm.core.annotate.*;
 
+/*
 @TargetClass(
         className =
                 "io.grpc.netty.shaded.io.netty.util.internal.shaded.org.jctools.util.UnsafeRefArrayAccess")
@@ -14,6 +15,9 @@ class Target_io_grpc_netty_shaded_io_netty_util_internal_shaded_org_jctools_util
     public static int REF_ELEMENT_SHIFT;
 }
 
+ */
+
+/*
 @TargetClass(className = "io.grpc.netty.shaded.io.netty.util.internal.CleanerJava6")
 final class Target_io_grpc_netty_shaded_io_netty_util_internal_CleanerJava6 {
     @Alias
@@ -23,7 +27,9 @@ final class Target_io_grpc_netty_shaded_io_netty_util_internal_CleanerJava6 {
             name = "cleaner")
     private static long CLEANER_FIELD_OFFSET;
 }
+ */
 
+/*
 @TargetClass(className = "io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent")
 final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent {
     @Alias
@@ -31,6 +37,9 @@ final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent
     private static long BYTE_ARRAY_BASE_OFFSET;
 }
 
+ */
+
+/*
 @TargetClass(className = "io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0")
 final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent0 {
     @Alias
@@ -40,6 +49,7 @@ final class Target_io_grpc_netty_shaded_io_netty_util_internal_PlatformDependent
             name = "address")
     private static long ADDRESS_FIELD_OFFSET;
 }
+ */
 
 /*
 we don't depend on remote
