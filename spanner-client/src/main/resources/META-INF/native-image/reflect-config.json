@@ -21,6 +21,21 @@
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
+  "name":"com.google.api.client.json.webtoken.JsonWebSignature$Header",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.google.api.client.json.webtoken.JsonWebToken$Header",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
+  "name":"com.google.api.client.json.webtoken.JsonWebToken$Payload",
+  "allDeclaredFields":true,
+  "allDeclaredMethods":true
+},
+{
   "name":"com.google.api.client.util.GenericData",
   "allDeclaredFields":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
@@ -732,13 +747,22 @@
 },
 {
   "name":"io.grpc.netty.shaded.io.netty.channel.epoll.Epoll",
-  "methods":[
-    {"name":"isAvailable","parameterTypes":[] }, 
-    {"name":"unavailabilityCause","parameterTypes":[] }
-  ]
+  "methods":[{"name":"isAvailable","parameterTypes":[] }]
 },
 {
-  "name":"io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel",
+  "name":"io.grpc.netty.shaded.io.netty.channel.epoll.EpollChannelOption",
+  "fields":[{"name":"TCP_USER_TIMEOUT"}]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.epoll.EpollEventLoopGroup",
+  "methods":[{"name":"<init>","parameterTypes":["int","java.util.concurrent.ThreadFactory"] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.epoll.EpollServerSocketChannel",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"io.grpc.netty.shaded.io.netty.channel.epoll.EpollSocketChannel",
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -780,10 +804,6 @@
 },
 {
   "name":"io.grpc.netty.shaded.io.netty.internal.tcnative.SSL"
-},
-{
-  "name":"io.grpc.netty.shaded.io.netty.util.AbstractReferenceCounted",
-  "fields":[{"name":"refCnt", "allowUnsafeAccess":true}]
 },
 {
   "name":"io.grpc.netty.shaded.io.netty.util.ReferenceCountUtil",
@@ -909,14 +929,11 @@
   ]
 },
 {
-  "name":"sun.nio.ch.SelectorImpl",
-  "fields":[
-    {"name":"publicSelectedKeys", "allowUnsafeAccess":true}, 
-    {"name":"selectedKeys", "allowUnsafeAccess":true}
-  ]
-},
-{
   "name":"sun.security.ssl.SSLContextImpl",
   "fields":[{"name":"trustManager", "allowUnsafeAccess":true}]
-}
+},
+  {
+    "name":"io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel",
+    "methods":[{"name":"<init>","parameterTypes":[] }]
+  }
 ]

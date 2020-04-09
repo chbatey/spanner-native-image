@@ -1,0 +1,6 @@
+[
+{
+  "name":"io.grpc.netty.shaded.io.netty.handler.ssl.ReferenceCountedOpenSslContext$AbstractCertificateVerifier",
+  "methods":[{"name":"verify","parameterTypes":["long","byte[][]","java.lang.String"] }]
+}
+]

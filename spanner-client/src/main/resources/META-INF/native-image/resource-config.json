@@ -1,0 +1,10 @@
+{
+  "resources":[
+    {"pattern":"META-INF/native/libio_grpc_netty_shaded_netty_tcnative_linux_x86_64.so"}, 
+    {"pattern":"META-INF/services/io.grpc.LoadBalancerProvider"}, 
+    {"pattern":"META-INF/services/io.grpc.ManagedChannelProvider"}, 
+    {"pattern":"META-INF/services/io.grpc.NameResolverProvider"}, 
+    {"pattern":"google-http-client.properties"}, 
+    {"pattern":"org/slf4j/impl/StaticLoggerBinder.class"}
+  ]
+}

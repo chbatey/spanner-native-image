@@ -1,18 +1,9 @@
-package internal;// FIXME THIS FILE IS FOR PROOF-OF-CONCEPT ONLY
+package graal.please.work;// FIXME THIS FILE IS FOR PROOF-OF-CONCEPT ONLY
 // THESE SUBSTITUTIONS SHOULD BE PRESENT IN THE SHADED VERSION OF NETTY IN GRPC-NETTY-SHADED,
 // AGRONA, AND IN PROTOBUF_JAVA. NOT HERE!
 
-import com.oracle.svm.core.annotate.*;
-
-
-@TargetClass(className = "akka.dispatch.affinity.AffinityPool$IdleStrategy")
-final class Target_akka_dispatch_affinity_AffinityPool {
-    @Substitute
-    public void idle() {
-        // unsupported use of method handles in this method
-        throw new RuntimeException("Dont use AffinityPool");
-    }
-}
+import com.oracle.svm.core.annotate.Substitute;
+import com.oracle.svm.core.annotate.TargetClass;
 
 // From adriaan
 // TODO: proper replacement for accessing the UNALIGNED field in java.nio.Bits https://github.com/netty/netty/blob/netty-4.1.42.Final/common/src/main/java/io/netty/util/internal/PlatformDependent0.java#L266
